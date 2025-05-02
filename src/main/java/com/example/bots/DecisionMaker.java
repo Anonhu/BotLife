@@ -100,8 +100,6 @@ public class DecisionMaker {
             ItemStack food = new ItemStack(org.bukkit.Material.APPLE); // Пример: яблоко
             bot.eat(food);
         }
-        if(bot.getHunger() < 10){
-        }
     }
 
     private TaskType selectTask() {
