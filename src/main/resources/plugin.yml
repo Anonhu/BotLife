@@ -1,0 +1,9 @@
+name: BotLife
+version: 1.0-SNAPSHOT
+main: com.example.Main
+api-version: 1.20
+description: BotLife plugin
+commands:
+  bot:
+    description: Bot command
+    usage: /<command>
