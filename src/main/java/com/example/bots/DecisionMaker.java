@@ -53,8 +53,7 @@ public class DecisionMaker {
     }
 
     private void handleExplore() {
-        Location currentLocation = bot.getLocation();
-        Location target = new Location(currentLocation.getWorld(), currentLocation.getX() + 10, currentLocation.getY(), currentLocation.getZ() + 10);
+        Location target = bot.getTarget();
         bot.move(target);
     }
 
@@ -75,7 +74,7 @@ public class DecisionMaker {
         List<Entity> nearbyEntities = bot.getNearbyEntities(5.0);
         if (!nearbyEntities.isEmpty()) {
             for (Entity entity : nearbyEntities) {
-                bot.interact(entity.getLocation().getBlock());
+                bot.interact(entity.getLocation().getBlock()); //Cast entity to LivingEntity
             }
         }
     }
@@ -85,7 +84,7 @@ public class DecisionMaker {
         List<Entity> nearbyEntities = bot.getNearbyEntities(10.0);
         if (!nearbyEntities.isEmpty()) {
             for (Entity entity : nearbyEntities) {
-                bot.attack((LivingEntity) entity);
+                bot.attack((LivingEntity) entity); //Cast entity to LivingEntity
             }
         }
     }
