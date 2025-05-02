@@ -130,4 +130,5 @@ public class DecisionMaker {
 
     public Object recall(String key) {
         return memory.get(key);
-    }
+    } 
+}
